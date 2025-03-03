@@ -1,0 +1,11 @@
+### GET / 
+GET http://localhost:4997
+
+### Register a user POST /AUTH/REGISTER 
+POST http://localhost:4997/auth/register 
+Content-Type: application/json
+
+{
+    "username": "priya3@gmail.com", "password": "brawlhalla"
+
+}
