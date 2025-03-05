@@ -6,6 +6,43 @@ POST http://localhost:4997/auth/register
 Content-Type: application/json
 
 {
-    "username": "priya3@gmail.com", "password": "brawlhalla"
+    "username": "johnnyharis@gmail.com", "password": "youtube123"
 
 }
+
+### Login a user POST /AUTH/LOGIN 
+POST http://localhost:4997/auth/login 
+Content-Type: application/json
+
+{
+    "username": "johnnyharis@gmail.com", "password": "youtube123"
+
+}
+
+### Fetch all todos GET /TODOS (protected) 
+GET http://localhost:4997/todos 
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzQxMTk2ODY0LCJleHAiOjE3NDEyODMyNjR9.LSnxBPPHSjQlxlStQnnjXMk9IP5M-GkHtNwfSaU8U0o
+
+### Creates a new todo POST /TODOS (protected) 
+POST http://localhost:4997/todos 
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzQxMTk2ODY0LCJleHAiOjE3NDEyODMyNjR9.LSnxBPPHSjQlxlStQnnjXMk9IP5M-GkHtNwfSaU8U0o
+Content-Type: application/json
+
+{
+    "task": "Make a youtube video"
+
+}
+
+### Update a todo PUT /TODOS/:ID (protected) 
+PUT http://localhost:4997/todos/6
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzQxMTk2ODY0LCJleHAiOjE3NDEyODMyNjR9.LSnxBPPHSjQlxlStQnnjXMk9IP5M-GkHtNwfSaU8U0o
+Content-Type: application/json
+
+{
+    "task": "Make a youtube video"
+
+}
+
+### Delete a todo DELETE /TODOS/:ID (protected) 
+DELETE http://localhost:4997/todos/15
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzQxMTk2ODY0LCJleHAiOjE3NDEyODMyNjR9.LSnxBPPHSjQlxlStQnnjXMk9IP5M-GkHtNwfSaU8U0o

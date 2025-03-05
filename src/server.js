@@ -5,7 +5,8 @@ const cors = require("cors")
 const pool = require("./db.js");
 const port = process.env.PORT;
 const authRoutes = require('./routes/authRoutes.js')
-const todoRoutes = require('./routes/todoRoutes.js')
+const todoRoutes = require('./routes/todoRoutes.js');
+const authMiddleware = require("./middleware/authMiddleware.js");
 
 
 //middleware
@@ -18,7 +19,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/auth', authRoutes)
-app.use('/todos', todoRoutes)
+app.use('/todos', authMiddleware, todoRoutes)
 
 
 app.get('/api/users', async (req, res) => {
