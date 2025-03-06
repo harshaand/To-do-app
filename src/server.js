@@ -9,7 +9,6 @@ const todoRoutes = require('./routes/todoRoutes.js');
 const authMiddleware = require("./middleware/authMiddleware.js");
 
 
-//middleware
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '..', 'public')));

@@ -44,5 +44,5 @@ Content-Type: application/json
 }
 
 ### Delete a todo DELETE /TODOS/:ID (protected) 
-DELETE http://localhost:4997/todos/15
+DELETE http://localhost:4997/todos/6
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzQxMTk2ODY0LCJleHAiOjE3NDEyODMyNjR9.LSnxBPPHSjQlxlStQnnjXMk9IP5M-GkHtNwfSaU8U0o
